@@ -2,9 +2,13 @@
 
 Módulo FastAPI que representa a análise de permanência em câmeras de elevador dentro de uma operação VMS integrada.
 
+## O Que Significa VMS Aqui
+
+VMS significa Sistema de Gerenciamento de Vídeo: a camada que centraliza câmeras, DVRs/NVRs, streams ao vivo, gravações, eventos, alertas e integrações. Neste repositório, o VMS é a base operacional que fornece vídeo em tempo real e recebe eventos, métricas e health checks do módulo.
+
 ## O Que o Sistema Faz
 
-- Recebe payloads sintéticos de detecção vindos de um worker de stream VMS em tempo real.
+- Recebe payloads sintéticos de detecção vindos de um worker de stream em tempo real conectado ao VMS.
 - Mantém runtime por câmera: ROI, último frame, tracks ativos, limite de permanência e cooldown.
 - Gera evento quando uma pessoa permanece no elevador acima do tempo configurado.
 - Expõe health check para diferenciar falha técnica de ausência real de evento.

@@ -10,7 +10,7 @@ from app.analytics import ElevatorAnalyticsEngine
 app = FastAPI(
     title='Análise de Permanência em Elevadores',
     version='2.0.0',
-    description='Módulo público para análise de permanência em elevadores, streaming VMS e alertas operacionais.',
+    description='Módulo público para análise de permanência em elevadores, VMS (Sistema de Gerenciamento de Vídeo), streaming e alertas operacionais.',
 )
 
 
@@ -76,6 +76,7 @@ def index() -> str:
       <p>
         Módulo FastAPI para runtime de câmera, ROI, track de pessoa, limite de permanência,
         evento operacional e health check. Representa um worker de analytics conectado a stream VMS em tempo real.
+        VMS significa Sistema de Gerenciamento de Vídeo, a camada que centraliza câmeras, streams, eventos e alertas.
       </p>
       <ul>
         <li><a href="/api/system/health">Saúde do sistema</a></li>
