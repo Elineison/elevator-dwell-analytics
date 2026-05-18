@@ -10,7 +10,7 @@ from app.analytics import ElevatorAnalyticsEngine
 app = FastAPI(
     title='Análise de Permanência em Elevadores',
     version='2.0.0',
-    description='Estudo de caso público para análise de permanência em elevadores e operações de alerta VMS.',
+    description='Módulo público para análise de permanência em elevadores, streaming VMS e alertas operacionais.',
 )
 
 
@@ -71,12 +71,11 @@ class DetectionIn(BaseModel):
 def index() -> str:
     return '''
     <main style="font-family:system-ui;max-width:920px;margin:40px auto;line-height:1.5">
-      <p style="text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:#476582">estudo de caso público</p>
+      <p style="text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:#476582">módulo público</p>
       <h1>Análise de Permanência em Elevadores</h1>
       <p>
-        Serviço FastAPI sanitizado com base em trabalho real de VMS: runtime de câmera, ROI,
-        duração de track de pessoa, cooldown, payload de evento e health checks para operação.
-        O modelo público trata Dahua/Intelbras como uma única família operacional.
+        Módulo FastAPI para runtime de câmera, ROI, track de pessoa, limite de permanência,
+        evento operacional e health check. Representa um worker de analytics conectado a stream VMS em tempo real.
       </p>
       <ul>
         <li><a href="/api/system/health">Saúde do sistema</a></li>
