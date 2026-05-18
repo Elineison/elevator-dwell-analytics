@@ -19,7 +19,7 @@ CAMERAS = [
         'id': 'elev-social-a01',
         'name': 'Social elevator cabin',
         'site': 'Residential tower A',
-        'vendor': 'generic-vms',
+        'platform_family': 'dahua-intelbras',
         'threshold_s': 120.0,
         'cooldown_s': 60.0,
         'analysis_enabled': True,
@@ -35,7 +35,7 @@ CAMERAS = [
         'id': 'elev-service-b02',
         'name': 'Service elevator cabin',
         'site': 'Residential tower B',
-        'vendor': 'generic-vms',
+        'platform_family': 'dahua-intelbras',
         'threshold_s': 150.0,
         'cooldown_s': 90.0,
         'analysis_enabled': True,
@@ -76,6 +76,7 @@ def index() -> str:
       <p>
         Sanitized FastAPI service based on real VMS work: camera runtime, ROI configuration,
         person track duration, cooldown, event payload and health checks for operators.
+        The public model treats Dahua/Intelbras as one operational platform family.
       </p>
       <ul>
         <li><a href="/api/system/health">System health</a></li>

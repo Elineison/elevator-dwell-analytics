@@ -2,7 +2,7 @@
 
 Public case study of an elevator video-analytics service for security operations.
 
-This repository is a sanitized, portfolio-safe version of work I built around VMS camera streams, person detection, dwell-time rules, alert cooldowns, and operator health checks. It is not a dump of production code. The purpose is to show the engineering decisions without exposing customers, camera endpoints, recordings, SDK files, credentials, or private integrations.
+This repository is a sanitized, portfolio-safe version of work I built around VMS camera streams, person detection, dwell-time rules, alert cooldowns, Dahua/Intelbras platform-family context, and operator health checks. It is not a dump of production code. The purpose is to show the engineering decisions without exposing customers, camera endpoints, recordings, SDK files, credentials, or private integrations.
 
 ## Operational Problem
 
@@ -10,7 +10,7 @@ In monitored residential environments, an elevator camera can stay visually norm
 
 ## What This Demonstrates
 
-- FastAPI service design for video analytics workers.
+- FastAPI service design for video analytics workers in a Dahua/Intelbras operational platform family.
 - Per-camera runtime state with ROI, threshold, cooldown, last frame age, and tracks.
 - Synthetic person-track ingestion that creates an event only after the configured dwell threshold.
 - Health endpoint that separates camera runtime issues from business events.
@@ -49,7 +49,7 @@ curl http://127.0.0.1:8011/api/events
 
 ## Why This Is Public-Safe
 
-The repository uses synthetic sites, camera IDs, bounding boxes, and event payloads. It does not include real IP addresses, customer names, recordings, vendor SDK binaries, alert URLs, or credentials.
+The repository uses synthetic sites, camera IDs, bounding boxes, and event payloads. It treats Dahua/Intelbras as one operational platform family and does not include real IP addresses, customer names, recordings, platform SDK binaries, alert URLs, or credentials.
 
 ## Skills Represented
 
