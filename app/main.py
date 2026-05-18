@@ -8,17 +8,17 @@ from app.analytics import ElevatorAnalyticsEngine
 
 
 app = FastAPI(
-    title='Elevator Dwell Analytics',
+    title='Análise de Permanência em Elevadores',
     version='2.0.0',
-    description='Public case study for elevator dwell-time analytics and VMS alert operations.',
+    description='Estudo de caso público para análise de permanência em elevadores e operações de alerta VMS.',
 )
 
 
 CAMERAS = [
     {
         'id': 'elev-social-a01',
-        'name': 'Social elevator cabin',
-        'site': 'Residential tower A',
+        'name': 'Cabine do elevador social',
+        'site': 'Torre residencial A',
         'platform_family': 'dahua-intelbras',
         'threshold_s': 120.0,
         'cooldown_s': 60.0,
@@ -33,8 +33,8 @@ CAMERAS = [
     },
     {
         'id': 'elev-service-b02',
-        'name': 'Service elevator cabin',
-        'site': 'Residential tower B',
+        'name': 'Cabine do elevador de serviço',
+        'site': 'Torre residencial B',
         'platform_family': 'dahua-intelbras',
         'threshold_s': 150.0,
         'cooldown_s': 90.0,
@@ -71,19 +71,19 @@ class DetectionIn(BaseModel):
 def index() -> str:
     return '''
     <main style="font-family:system-ui;max-width:920px;margin:40px auto;line-height:1.5">
-      <p style="text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:#476582">public case study</p>
-      <h1>Elevator Dwell Analytics</h1>
+      <p style="text-transform:uppercase;font-size:12px;letter-spacing:.08em;color:#476582">estudo de caso público</p>
+      <h1>Análise de Permanência em Elevadores</h1>
       <p>
-        Sanitized FastAPI service based on real VMS work: camera runtime, ROI configuration,
-        person track duration, cooldown, event payload and health checks for operators.
-        The public model treats Dahua/Intelbras as one operational platform family.
+        Serviço FastAPI sanitizado com base em trabalho real de VMS: runtime de câmera, ROI,
+        duração de track de pessoa, cooldown, payload de evento e health checks para operação.
+        O modelo público trata Dahua/Intelbras como uma única família operacional.
       </p>
       <ul>
-        <li><a href="/api/system/health">System health</a></li>
-        <li><a href="/api/cameras">Cameras with runtime</a></li>
-        <li><a href="/api/events">Events</a></li>
+        <li><a href="/api/system/health">Saúde do sistema</a></li>
+        <li><a href="/api/cameras">Câmeras com runtime</a></li>
+        <li><a href="/api/events">Eventos</a></li>
       </ul>
-      <p>Use <code>POST /api/demo/elevator-dwell</code> to create a synthetic dwell event.</p>
+      <p>Use <code>POST /api/demo/elevator-dwell</code> para criar um evento sintético de permanência.</p>
     </main>
     '''
 

@@ -139,7 +139,7 @@ class ElevatorAnalyticsEngine:
             'track_id': track.track_id,
             'duration_s': round(track.observed_for_s, 1),
             'confidence': round(track.confidence, 3),
-            'operator_note': 'Person remained in elevator area above configured threshold.',
+            'operator_note': 'Pessoa permaneceu na área do elevador acima do limite configurado.',
             'integration_payload': self._integration_payload(runtime, track, now),
             'created_at': now,
             'status': 'open',

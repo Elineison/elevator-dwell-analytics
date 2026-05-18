@@ -1,2 +1,2 @@
-"""Portfolio-safe elevator analytics demo."""
+"""Estudo de caso público e sanitizado para analytics de elevador."""
 

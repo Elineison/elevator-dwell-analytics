@@ -1,12 +1,12 @@
-# Ethics And Public Scope
+# Ética e Escopo Público
 
-This repository is a public case study, not a production export.
+Este repositório é um estudo de caso público, não uma exportação de produção.
 
-It intentionally avoids:
+Ele evita intencionalmente:
 
-- real customer names or condominium identifiers
-- private camera IPs, DVR addresses, stream URLs, or SDK binaries
-- production alert destinations, tokens, passwords, or webhook secrets
-- recordings, screenshots, or event history from real monitored environments
+- nomes reais de clientes ou condomínios
+- IPs privados de câmeras, endereços de DVR/NVR, URLs de stream ou SDKs proprietários
+- destinos reais de alerta, tokens, senhas ou segredos de webhook
+- gravações, screenshots ou histórico de eventos de ambientes reais monitorados
 
-The code models the public boundary of the system: camera runtime, synthetic detections, dwell-time rules, event payloads, and health checks. That keeps the portfolio useful for recruiters while respecting customers and operational confidentiality.
+O código modela a fronteira pública do sistema: runtime de câmera, detecções sintéticas, regras de permanência, payloads de evento e health checks. Isso mantém o portfólio útil para avaliação técnica sem comprometer clientes ou confidencialidade operacional.
